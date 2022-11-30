@@ -2,7 +2,6 @@ package com.example.notesproject.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.Date
 
 @Entity(tableName = "note_table")
 data class Note(
@@ -10,5 +9,5 @@ data class Note(
     val id: Int,
     val name: String,
     val description: String,
-    val date: Date
+    val date: String
 )
