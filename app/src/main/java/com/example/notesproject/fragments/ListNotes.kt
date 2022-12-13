@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notesproject.R
-import com.example.notesproject.data.NoteViewModel
+import com.example.notesproject.viewmodel.NoteViewModel
 import kotlinx.android.synthetic.main.fragment_list_notes.view.*
 
 class ListNotes : Fragment() {

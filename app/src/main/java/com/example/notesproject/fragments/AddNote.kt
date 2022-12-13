@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.notesproject.R
-import com.example.notesproject.data.Note
-import com.example.notesproject.data.NoteViewModel
+import com.example.notesproject.model.Note
+import com.example.notesproject.viewmodel.NoteViewModel
 import kotlinx.android.synthetic.main.fragment_add_note.*
 import kotlinx.android.synthetic.main.fragment_add_note.view.*
 

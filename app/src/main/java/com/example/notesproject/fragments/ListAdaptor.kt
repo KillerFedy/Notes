@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.ListFragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesproject.R
-import com.example.notesproject.data.Note
+import com.example.notesproject.model.Note
 import kotlinx.android.synthetic.main.custom_row.view.*
 
 class ListAdaptor: RecyclerView.Adapter<ListAdaptor.ViewHolder>() {
@@ -25,6 +27,11 @@ class ListAdaptor: RecyclerView.Adapter<ListAdaptor.ViewHolder>() {
         holder.itemView.textId.text = currentItem.id.toString()
         holder.itemView.textName.text = currentItem.name.toString()
         holder.itemView.textDesc.text = currentItem.description.toString()
+
+        holder.itemView.rowLayout.setOnClickListener {
+            val action = ListNotesDirections.actionListNotesToUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {
