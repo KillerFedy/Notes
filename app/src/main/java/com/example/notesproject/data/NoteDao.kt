@@ -2,6 +2,7 @@ package com.example.notesproject.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -18,5 +19,12 @@ interface NoteDao {
 
     @Update
     suspend fun updateNote(note: Note)
+
+    @Delete
+    suspend fun deleteNote(note: Note)
+
+    @Query("DELETE FROM note_table")
+    suspend fun deleteAllNotes()
+
 
 }
